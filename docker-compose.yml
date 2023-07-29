@@ -13,7 +13,7 @@ services:
       - 8000:8000
 
   mongo:
-    image: iondv/arm32-mongodb
+    image: andresvidal/rpi3-mongodb3
     command: mongod --journal
     volumes:
       - mongo_data:/data/db
