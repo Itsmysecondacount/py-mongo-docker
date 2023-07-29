@@ -13,7 +13,7 @@ services:
       - 8000:8000
 
   mongo:
-    image: mongo:latest
+    image: andresvidal/mongo-arm32v7
     volumes:
       - mongo_data:/data/db
     ports:
