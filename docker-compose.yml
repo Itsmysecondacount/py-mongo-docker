@@ -14,6 +14,7 @@ services:
 
   mongo:
     image: iondv/arm32-mongodb
+    command: mongod --journal
     volumes:
       - mongo_data:/data/db
     ports:
