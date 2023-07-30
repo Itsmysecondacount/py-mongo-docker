@@ -13,8 +13,8 @@ services:
       - 8000:8000
 
   mongo:
-    image: andresvidal/rpi3-mongodb3
-    command: mongod --journal
+    image: mongo
+    command: mongod
     volumes:
       - mongo_data:/data/db
     ports:
