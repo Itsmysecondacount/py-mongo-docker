@@ -49,7 +49,7 @@ async def post_todo(todo: Timbre):  # Se ejecuta esto
 
     if response:
         try:
-            await bot.send_message(chat_id="-1001616071693", text=todo_dict["mesage"])
+            await bot.send_message(chat_id="-1001616071693", text="perro")
             requests.get("http://192.168.0.56/26/on", timeout=1)
         except Exception as e:
             print("Ocurrió un error: ", e)

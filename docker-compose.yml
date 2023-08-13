@@ -8,17 +8,16 @@ services:
     volumes:
       - ./backend:/app
     depends_on:
-      - mongo
+      - redis-py
     ports:
       - 8000:8000
 
-  mongo:
-    image: mongo
-    command: mongod
+  redis-py:
+    image: redis:7.2-rc3-alpine
     volumes:
-      - mongo_data:/data/db
+      - redis_data:/data
     ports:
-      - 27017:27017
+      - 6379:6379
 
 volumes:
-  mongo_data:
+  redis_data:
